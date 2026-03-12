@@ -2,6 +2,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import StepIndicator from "@/components/StepIndicator";
 import ClientShell from "@/components/ClientShell";
+import { cartData } from "@/data/cart";
 
 export const metadata = {
   title: "Ecoyaan — Checkout",
@@ -9,18 +10,7 @@ export const metadata = {
     "Eco-friendly checkout flow. Shop sustainable products with Ecoyaan.",
 };
 
-async function getCartData() {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
-  try {
-    const res = await fetch(`${baseUrl}/api/cart`, { cache: "no-store" });
-    return res.json();
-  } catch {
-    return null;
-  }
-}
-
-export default async function RootLayout({ children }) {
-  const cartData = await getCartData();
+export default function RootLayout({ children }) {
 
   return (
     <html lang="en">

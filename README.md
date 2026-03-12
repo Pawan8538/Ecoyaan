@@ -2,7 +2,7 @@
 
 A simplified checkout flow built with **Next.js (App Router)**, **Tailwind CSS v4**, and **React Context API** — demonstrating SSR, form validation, and responsive design.
 
-**Live Demo:** _[Deploy to Vercel after pushing to GitHub]_
+**Live Demo:** https://eco-yaan.netlify.app/
 
 ---
 
@@ -54,14 +54,6 @@ cd ecoyaan
 npm install
 npm run dev
 # Open http://localhost:3000
-```
-
-## Deploy
-
-```bash
-# Push to GitHub, then:
-npx vercel --prod
-# Or connect the repo to Vercel dashboard for auto-deploys
 ```
 
 ## Tech Stack
